@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Niix - TFA</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="./sbadmin.css">
+	<script src="jssha.js"></script>
+	<script src="background.js"></script>
+	<meta charset="utf-8" />
+
+	<style>
+		body {
+			background: #1d1b31;
+			width: 500px;
+			height: 200px;
+		}
+		body {
+		    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+		    scrollbar-width: none;  /* Firefox */
+		}
+		body::-webkit-scrollbar { 
+		    display: none;  /* Safari and Chrome */
+		}
+		.i_in {
+        	display: inline;
+			animation: IndexfadeIn 0.2s 1 linear forwards;
+		}
+		.i_out {
+			animation: IndexfadeOut 0.2s 1 linear forwards;
+		}
+		@keyframes IndexfadeIn {
+	        0% {
+	        	opacity: 0; 
+	        	display: none;
+	        } 
+	        100% {
+	        	opacity: 1; 
+	        	display: inline;
+	        }
+	    }
+	    @keyframes IndexfadeOut {
+	        0% {opacity: 1; display: inline;} 
+	        100% {opacity: 0; display: none;}
+	    }
+
+	    .hide {
+	    	display: none;
+	    }
+	    
+
+	    .addentry {
+	    	position: absolute;
+	    	margin-top: -30px;
+	    	margin-left: 11px;
+	    }
+	    #add_entry i {
+		  	transition: all 0.5s ease;
+	    	color: #fff;
+	    }
+	    #add_entry:hover i{
+		  transition: all 0.5s ease;
+		  color: red;
+		}
+
+		a {
+		  transition: all 0.2s ease;
+		  color: aqua;
+		}
+		a:hover {
+		  transition: all 0.2s ease;
+		  color: #00fff6;
+		}
+
+		.css-input {
+             padding: 5px;
+             font-size: 16px;
+             border-width: 2px;
+             border-color: #2a5e64;
+             background-color: #1d1b31;
+             color: #00e7ff;
+             border-style: groove;
+             border-radius: 8px;
+             box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+             text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+        }
+         .css-input:focus {
+             outline:none;
+        }
+	</style>
+</head>
+<body>
+
+	<div id="content">
+		<br>
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <div class="card border-left-warning shadow h-100 py-2"style="background: #1d1b31;">
+                <div class="card-body"style="background: #1d1b31;">
+                  <div class="row no-gutters align-items-center">
+          			<h1 class="h4 mb-0 font-weight-bold text-white-800" style="color: #fff">NiixTFA - TwoFactorAuthenticator</h1>
+          			<div class="h5 mb-0 font-weight-bold text-white-800">
+          				<a href="#" id="add_entry">
+        					<i class='bx bx-plus-medical addentry' id="entryicon"></i>
+          				</a>
+          			</div>
+          		  </div>
+          		</div>
+          	</div>
+          </div>
+
+          <div class="row" id="row">
+            <div class="col-xl-3 col-md-6 mb-4 hide" id="putentry">
+          	  <div class="card border-left-info shadow h-100 py-2"style="background: #1d1b31;">
+                <div class="card-body"style="background: #1d1b31;">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Adicionando TFA</div>
+                      <div class="h5 mb-0 font-weight-bold text-white-800">
+                      	<center>Nome: <input type="text" id="name" class="css-input"><br>
+                      	Código: <input type="text" name="token" id="token" class="css-input"><br>
+                      	<a href="#" id="addtoken">[SALVAR]</a></center>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

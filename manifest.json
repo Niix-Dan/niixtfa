@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "NiixTFA - Two factor authenticator",
+    "version": "1.0",
+    "description": "Essa extensão, gera códigos de autenticação para aplicações.",
+    "background": {
+      "service-worker": ["jssha.js","background.js"]
+    },
+    "permissions": [
+      "storage",
+      "activeTab",
+      "tabs"
+    ],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "content_security_policy": {
+      "script-src": "'self' https://unpkg.com",
+      "object-src": "'self'"
+    }
+  }
